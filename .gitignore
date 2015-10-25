@@ -1,0 +1,35 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+# Local folders
+dist/
+node_modules/
+temp/
+tmp/
+.sass-cache/
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+*.sublime-workspace
+
+# OS or Editor folders
+.DS_Store
+.cache
+.db
+.idea
+.project
+.settings
+.tmproj
+.vim_session
+.zedstate
+nbproject
+Thumbs.db

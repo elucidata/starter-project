@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "outDir": "tmp",
+    "sourceMap": true,
+    "jsx": "react",
+    "target": "es5",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": false,
+    "isolatedModules": true,
+    "moduleResolution": "node"
+  },
+  "filesGlob": [
+    "typings/tsd.d.ts",
+    "app/globals.d.ts",
+    "app/*.ts",
+    "app/*.tsx",
+    "app/*/*.ts",
+    "app/*/*.tsx"
+  ],
+  "files": [
+    "typings/tsd.d.ts",
+    "app/globals.d.ts",
+    "app/main.tsx",
+    "app/data/state.ts",
+    "app/data/UIStore.ts",
+    "app/tools/assign.ts",
+    "app/components/AppRoot.tsx",
+    "app/components/MainLayout.tsx"
+  ],
+  "exclude": [],
+  "externalTranspiler_OLD": "babel",
+  "buildOnSave": false,
+  "compileOnSave": false,
+  "formatCodeOptions": {
+    "indentSize": 2,
+    "tabSize": 2,
+    "newLineCharacter": "\n",
+    "convertTabsToSpaces": true,
+    "insertSpaceAfterCommaDelimiter": true,
+    "insertSpaceAfterSemicolonInForStatements": true,
+    "insertSpaceBeforeAndAfterBinaryOperators": true,
+    "insertSpaceAfterKeywordsInControlFlowStatements": true,
+    "insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+    "placeOpenBraceOnNewLineForFunctions": false,
+    "placeOpenBraceOnNewLineForControlBlocks": false
+  }
+}
