@@ -57,12 +57,12 @@ import {observer} from 'mobservable-react'
 import {AllStores} from '../data/state'
 import './Page.less'
 
-interface PageProps extends React.Props<PageProps> {
+interface PageProps extends React.Props<Page> {
   stores: AllStores
 }
 
 @observer
-export class PageProps extends React.Component<PageProps, {}> {
+export class Page extends React.Component<PageProps, {}> {
   render() {
     let {stores} = this.props
 
