@@ -18,6 +18,7 @@ export function main() {
     document.getElementById('application')
   )
 
+  // Just an example of an observed state change:
   setTimeout( _ => {
     stores.ui.status = 'ready'
   }, 1000)

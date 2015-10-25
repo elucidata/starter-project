@@ -1,14 +1,11 @@
 import ui, {UIStore} from './UIStore'
 
-type AllStores = {
-  ui: UIStore
+export class AppStores {
+  ui = ui
 }
 
 export {
-  AllStores,
   UIStore
 }
 
-export default {
-  ui
-}
+export default new AppStores()

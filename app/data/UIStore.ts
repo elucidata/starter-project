@@ -20,6 +20,4 @@ export class UIStore {
 
 }
 
-
-
 export default new UIStore()

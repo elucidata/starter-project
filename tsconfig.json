@@ -32,7 +32,6 @@
     "app/components/MainLayout.tsx"
   ],
   "exclude": [],
-  "externalTranspiler_OLD": "babel",
   "buildOnSave": false,
   "compileOnSave": false,
   "formatCodeOptions": {

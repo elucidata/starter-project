@@ -1,9 +1,9 @@
 import * as React from 'react'
 import {observer} from 'mobservable-react'
-import {AllStores} from '../data/state'
+import {AppStores} from '../data/state'
 
 interface MainLayoutProps extends React.Props<MainLayout> {
-  stores: AllStores
+  stores: AppStores
 }
 
 @observer
@@ -11,7 +11,6 @@ export class MainLayout extends React.Component<MainLayoutProps, {}> {
 
   handleClick = (e: React.MouseEvent) => {
     e.preventDefault()
-    /*alert("SHit")*/
     console.log('Hello!')
   }
 

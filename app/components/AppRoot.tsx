@@ -1,9 +1,9 @@
 import * as React from 'react'
 import MainLayout from './MainLayout'
-import {AllStores} from '../data/state'
+import {AppStores} from '../data/state'
 
 interface AppRootProps extends React.Props<AppRoot> {
-  stores: AllStores
+  stores: AppStores
 }
 
 export class AppRoot extends React.Component<AppRootProps, {}>{
