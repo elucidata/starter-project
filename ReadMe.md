@@ -6,6 +6,7 @@
     - TypeScript
     - Less CSS
     - Hot Reloading
+    - Others...
 
 
 ## Development
@@ -31,6 +32,7 @@ Or via npm scripts:
 $ npm run build
 ```
 
+
 ## Application
 
 The starter code has a simple layout (so it's easy to scrap, if you please) for use with Mobservable.
@@ -52,20 +54,20 @@ There is no difference between components that are smart/dumb, connected/pure, c
 ```javascript
 import * as React from 'react'
 import {observer} from 'mobservable-react'
-import {AppState} from '../data/state'
+import {AllStores} from '../data/state'
 import './Page.less'
 
 interface PageProps extends React.Props<PageProps> {
-  app: AppState
+  stores: AllStores
 }
 
 @observer
 export class PageProps extends React.Component<PageProps, {}> {
   render() {
-    let {app} = this.props
+    let {stores} = this.props
 
     return (
-      <div>v{ app.version }</div>
+      <div>v{ stores.ui.version }</div>
     )
   }
 }
@@ -74,7 +76,7 @@ export class PageProps extends React.Component<PageProps, {}> {
 
 ### Misc Tools
 
-All generic tools/helpers are under: `app/tools`
+All generic tools/helpers are under: `app/tools/`
 
 
 ### Main Entry
