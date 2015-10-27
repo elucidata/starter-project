@@ -2,6 +2,8 @@ import * as React from 'react'
 import {render} from 'react-dom'
 import App from './components/AppRoot'
 import stores from './data/state'
+
+import 'bootstrap/less/bootstrap.less'
 import './main.less'
 
 import NotFoundPage from './components/NotFoundPage'

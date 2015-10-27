@@ -5,6 +5,8 @@ interface LinkProps extends React.Props<Link> {
   href?: string
   path?: string
   className?: string
+  activeClassName?: string
+  inactiveClassName?: string
 }
 
 /*@observer*/
@@ -16,10 +18,13 @@ export class Link extends React.Component<LinkProps, {}> {
   }
 
   render() {
-    let {href, path, children, className = ""} = this.props
+    let {href, path, children, className = "", activeClassName="active", inactiveClassName=""} = this.props
 
     if (path === routeStore.context.path) {
-      className = `Link-isActive isActive ${ className }`
+      className = `${ className } ${ activeClassName }`
+    }
+    else {
+      className = `${ className } ${ inactiveClassName }`
     }
 
     if (this.props.href) {

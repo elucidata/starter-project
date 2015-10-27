@@ -85,7 +85,7 @@ module.exports = (isDevMode) => ({
     }, {
       test: /\.(jpeg|jpg|jpe|gif|png|wav|mp3|otf|eot|svg|ttf|woff|woff2)(\?.*)*$/,
       // loader: "url-loader?limit=8192"
-      loader: "file?name=asset-[name]-[hash:6].[ext]"
+      loader: "file?name=application/asset-[name]-[hash:6].[ext]"
     }, ],
   },
 
