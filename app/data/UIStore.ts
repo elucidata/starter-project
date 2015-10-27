@@ -14,7 +14,7 @@ export class UIStore {
     return this.status === 'ready'
   }
 
-  setRemoteConnection( value:boolean ) {
+  setRemoteConnection(value: boolean) {
     this.remoteConnection = value
   }
 

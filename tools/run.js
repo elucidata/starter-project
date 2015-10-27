@@ -4,8 +4,8 @@ function format(time) {
   return time.toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, '$1')
 }
 
-async function run(fn, options={}) {
-  const log = (...args)=> {
+async function run(fn, options = {}) {
+  const log = (...args) => {
     console.log(`[${format(new Date())}] ${fn.name}:`, ...args)
   }
   const start = new Date()

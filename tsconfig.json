@@ -24,12 +24,17 @@
   "files": [
     "typings/tsd.d.ts",
     "app/globals.d.ts",
-    "app/main.tsx",
+    "app/main.ts",
+    "app/data/RouteStore.ts",
     "app/data/state.ts",
     "app/data/UIStore.ts",
     "app/tools/assign.ts",
     "app/components/AppRoot.tsx",
-    "app/components/MainLayout.tsx"
+    "app/components/DebugPage.tsx",
+    "app/components/HomePage.tsx",
+    "app/components/Link.tsx",
+    "app/components/MainLayout.tsx",
+    "app/components/NotFoundPage.tsx"
   ],
   "exclude": [],
   "buildOnSave": false,

@@ -6,7 +6,7 @@ var path = require('path'),
 var serverPort = 8080,
     config = common(true)
 
-module.exports= merge(config, {
+module.exports = merge(config, {
   _serverPort: serverPort,
   cache: true,
   debug: true,
@@ -17,12 +17,12 @@ module.exports= merge(config, {
     javascript: [
       ('webpack-dev-server/client?http://0.0.0.0:' + serverPort), // WebpackDevServer host and port
       'webpack/hot/only-dev-server',
-      './main.tsx' // Your appʼs entry point
+      config._entryPoint
     ],
   },
 
   output: {
-    publicPath: ('http://localhost:'+ serverPort +'/') // Required for webpack-dev-server
+    publicPath: ('http://localhost:' + serverPort + '/') // Required for webpack-dev-server
   },
 
   devServer: {

@@ -16,6 +16,7 @@
     "es6-promise": "^3.0.2",
     "mobservable": "^1.0.1",
     "mobservable-react": "^1.0.2",
+    "page": "^1.6.4",
     "react": "^0.14.0",
     "react-dom": "^0.14.0"
   },

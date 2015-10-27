@@ -13,10 +13,9 @@ async function dev_server(options, log) {
       contentPort = serverPort + 1,
       proxy = new httpProxy.RoutingProxy()
 
-
   app = connect()
-    .use( connect.favicon() )
-    .use( connect.static( config._assetPath ) )
+    .use(connect.favicon())
+    .use(connect.static(config._assetPath))
     // .use("/google", function(req, res) {
     //   console.log("Proxy:", req.originalUrl);
     //   req.url = req.originalUrl;
@@ -29,11 +28,11 @@ async function dev_server(options, log) {
 
 
   http.createServer(app)
-    .listen( contentPort, '0.0.0.0', function(err, result){
-      if( err ) {
+    .listen(contentPort, '0.0.0.0', function(err, result) {
+      if (err) {
         log(err);
       }
-      log("(internal) Content server listening at localhost:"+ contentPort)
+      log("(internal) Content server listening at localhost:" + contentPort)
     });
 
   devServer = new WebpackDevServer(webpack(config), {
@@ -45,16 +44,16 @@ async function dev_server(options, log) {
       // devtool: '#cheap-module-eval-source-map',
       devtool: 'source-map',
       debug: true,
+      // historyApiFallback: true,
       proxy: {
-        "*": ("http://localhost:"+ contentPort)
+        "*": ("http://localhost:" + contentPort)
       }
-      // historyApiFallback: true
     })
-    .listen( serverPort, '0.0.0.0', function (err, result) {
+    .listen(serverPort, '0.0.0.0', function(err, result) {
       if (err) {
         log(err);
       }
-      log( 'Development server listening at localhost:'+ serverPort );
+      log('Development server listening at localhost:' + serverPort);
     });
 
 }

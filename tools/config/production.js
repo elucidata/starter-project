@@ -5,7 +5,7 @@ var path = require('path'),
 
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-module.exports= merge(common(false), {
+module.exports = merge(common(false), {
   cache: false,
 
   debug: false,
@@ -24,5 +24,3 @@ module.exports= merge(common(false), {
   ]
 
 })
-
-// console.log("EXPORTS", JSON.stringify(module.exports, null, 2) )

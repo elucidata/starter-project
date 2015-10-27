@@ -2,6 +2,7 @@
 
 - React
 - Mobservable w/React support
+- Simple routing with Page.js
 - Webpack w/loaders for:
     - TypeScript
     - Less CSS
@@ -38,6 +39,11 @@ $ npm run build
 The starter code has a simple layout (so it's easy to scrap, if you please) for use with Mobservable.
 
 All source code is under: `app/`
+
+
+## Routing
+
+Routes are defined in `app/main.ts` using Page.js.
 
 
 ### State Data
@@ -81,6 +87,6 @@ All generic tools/helpers are under: `app/tools/`
 
 ### Main Entry
 
-The application's main entry is at: `app/main.tsx`
+The application's main entry is at: `app/main.ts`
 
 That's really all you need to know to get started!

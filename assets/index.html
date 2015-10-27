@@ -19,6 +19,7 @@
     {% for (var css in o.htmlWebpackPlugin.files.css) { %}
     <link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet">
     {% } %}
+    <base href="">
   </head>
   <noscript>
     This application will not run without JavaScript support!

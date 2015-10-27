@@ -1,19 +1,21 @@
 import clean from './clean'
 import run from './run'
 
-function compile( log ) {
+function compile(log) {
   return new Promise((resolve, reject) => {
     var webpack = require('webpack')
     var config = require('./config/production')
 
     webpack(config, (err, stats) => {
-      log( stats.toString({ colors:true, chunks:false }))
+      log(stats.toString({
+        colors: true,
+        chunks: false
+      }))
 
-      if( err ) {
+      if (err) {
         log("Error:", err)
         reject(err)
-      }
-      else {
+      } else {
         log("Done.")
         resolve(stats)
       }
@@ -22,8 +24,8 @@ function compile( log ) {
 }
 
 async function build(options, log) {
-  await run( clean )
-  await compile( log )
+  await run(clean)
+  await compile(log)
 }
 
 export default build
