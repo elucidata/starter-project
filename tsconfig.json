@@ -29,6 +29,7 @@
     "app/data/state.ts",
     "app/data/UIStore.ts",
     "app/tools/assign.ts",
+    "app/tools/collapse.ts",
     "app/components/AppRoot.tsx",
     "app/components/DebugPage.tsx",
     "app/components/HomePage.tsx",

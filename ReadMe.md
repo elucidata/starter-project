@@ -36,14 +36,30 @@ $ npm run build
 
 ## Application
 
-The starter code has a simple layout (so it's easy to scrap, if you please) for use with Mobservable.
+The starter code has a simple layout (so it's easy to scrap, if you please) for
+use with Mobservable.
 
 All source code is under: `app/`
 
 
-## Routing
+### Routing
 
-Routes are defined in `app/main.ts` using Page.js.
+Routes are defined in `app/main.ts` using Page.js:
+
+```javascript
+import stores from './data/state'
+
+const {route: { page, activate }} = stores
+
+page('/', activate(HomePage))
+page('/debug', activate(DebugPage))
+page('*', activate(NotFoundPage))
+
+page({
+  click: false,
+  hashbang: true
+})
+```
 
 
 ### State Data
@@ -51,11 +67,32 @@ Routes are defined in `app/main.ts` using Page.js.
 All the application data stores are under: `app/data/`
 
 
+### Validators
+
+Validators are functions that accept value objects and returns an `object`
+containing errors messages for invalid fields.
+
+```javascript
+import collapse from '../tools/collapse'
+
+export function validatePost( post ) {
+  return collapse({
+    title: !post.title && "Title is missing",
+    body: !post.body && "Body is missing"
+  })
+}
+
+export default validatePost
+```
+
+
 ### Views
 
 All the view components are under: `app/components/`
 
-There is no difference between components that are smart/dumb, connected/pure, container/simple, or whatever you want to call them. Basically any component that accesses state can be made reactive by adding an `@observer` decorator:
+There is no difference between components that are smart/dumb, connected/pure,
+container/simple, or whatever you want to call them. Basically any component
+that accesses state can be made reactive by adding an `@observer` decorator:
 
 ```javascript
 import * as React from 'react'
