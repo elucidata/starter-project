@@ -18,8 +18,8 @@
     "mobservable": "^1.0.1",
     "mobservable-react": "^1.0.2",
     "page": "^1.6.4",
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react": "^0.14.1",
+    "react-dom": "^0.14.1"
   },
   "optionalDependencies": {
     "mobservable-react-devtools": "^1.0.0"
@@ -47,7 +47,7 @@
     "script-loader": "^0.6.1",
     "shelljs": "^0.5.3",
     "style-loader": "^0.13.0",
-    "ts-loader": "^0.5.6",
+    "ts-loader": "^0.6.0",
     "typedoc": "^0.3.12",
     "typescript": "^1.6.2",
     "url-loader": "^0.5.6",
