@@ -1,5 +1,13 @@
 # Starter Project
 
+A simple "get up and running quickly" project starter. Not meant to be gospel,
+nor even suggested structure -- Merely a fast way to start a project that could
+be built for production in a pinch.
+
+I primarily use it for prototypes and product experiments.
+
+Out of the box support for:
+
 - React
 - Mobservable w/React support
 - Simple routing with Page.js
@@ -69,8 +77,8 @@ All the application data stores are under: `app/data/`
 
 ### Validators
 
-Validators are functions that accept value objects and returns an `object`
-containing errors messages for invalid fields.
+Validators are simple functions that accept value objects and return an `object`
+containing error messages for invalid fields.
 
 ```javascript
 import collapse from '../tools/collapse'
