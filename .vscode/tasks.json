@@ -6,12 +6,22 @@
 // ${fileExtname}: the current opened file's extension
 // ${cwd}: the current working directory of the spawned process
 {
-	"version": "0.1.0",
-	"command": "npm",
-	"args": [ "run" ],
-	"tasks": [
-		{ "taskName": "build", "isBuildCommand": true },
-    { "taskName": "clean" },
-    { "taskName": "dev-server", "isWatching": true }
-	]
+  "version": "0.1.0",
+  "command": "npm",
+  "args": [
+    "run"
+  ],
+  "tasks": [
+    {
+      "taskName": "build",
+      "isBuildCommand": true
+    },
+    {
+      "taskName": "clean"
+    },
+    {
+      "taskName": "dev-server",
+      "isWatching": true
+    }
+  ]
 }

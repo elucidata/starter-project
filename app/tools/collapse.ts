@@ -5,9 +5,9 @@ export function collapse(source: any): any {
   Object.keys(source).forEach(key => {
     let data = source[key]
 
-    if (data)[
+    if (data) {
       result[key] = data
-    ]
+    }
   })
 
   return result
