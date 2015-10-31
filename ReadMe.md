@@ -135,3 +135,7 @@ All generic tools/helpers are under: `app/tools/`
 The application's main entry is at: `app/main.ts`
 
 That's really all you need to know to get started!
+
+## Todo
+
+- [ ] Simple test harness 
