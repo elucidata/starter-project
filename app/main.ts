@@ -1,5 +1,4 @@
 import * as React from 'react'
-import {render} from 'react-dom'
 import App from './components/AppRoot'
 import stores from './data/state'
 
@@ -10,15 +9,16 @@ import NotFoundPage from './components/NotFoundPage'
 import DebugPage from "./components/DebugPage"
 import HomePage from "./components/HomePage"
 
-if (MODE === 'development') {
-  // Should only do this for debug builds....
-  require('mobservable-react-devtools')
-}
+// Should only do this for debug builds....
+// if (MODE === 'development') {
+  // npm install --save mobservable-react-devtools
+  // require('mobservable-react-devtools')
+// }
 
 export function main() {
-  console.info(stores.ui.name, stores.ui.version, 'starting in mode:', MODE)
+  const {route: { page, activate }, ui} = stores
 
-  const {route: { page, activate }} = stores
+  console.info(ui.name, ui.version, 'starting in mode:', MODE)
 
   page('/', activate(HomePage))
   page('/debug', activate(DebugPage))
@@ -35,7 +35,7 @@ export function main() {
   )
   // Just an example of an observed state change:
   setTimeout(_ => {
-    stores.ui.status = 'ready'
+    ui.status = 'ready'
   }, 1000)
 }
 

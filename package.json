@@ -13,15 +13,17 @@
     "dev-server": "babel-node tools/run dev-server"
   },
   "dependencies": {
-    "bootstrap": "^3.3.5",
     "es6-promise": "^3.0.2",
-    "mobservable": "^1.0.1",
-    "mobservable-react": "^1.0.2",
+    "mobservable": "^1.0.2",
+    "mobservable-react": "^2.0.0",
     "page": "^1.6.4",
     "react": "^0.14.1",
     "react-dom": "^0.14.1"
   },
   "optionalDependencies": {
+    "bootstrap": "^3.3.5"
+  },
+  "old": {
     "mobservable-react-devtools": "^1.0.0"
   },
   "babel": {
