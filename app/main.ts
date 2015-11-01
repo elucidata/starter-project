@@ -1,4 +1,3 @@
-import * as React from 'react'
 import App from './components/AppRoot'
 import stores from './data/state'
 
@@ -11,8 +10,8 @@ import HomePage from "./components/HomePage"
 
 // Should only do this for debug builds....
 // if (MODE === 'development') {
-  // npm install --save mobservable-react-devtools
-  // require('mobservable-react-devtools')
+//   npm install --save mobservable-react-devtools
+//   require('mobservable-react-devtools')
 // }
 
 export function main() {
