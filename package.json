@@ -17,8 +17,8 @@
     "mobservable": "^1.0.2",
     "mobservable-react": "^2.0.0",
     "page": "^1.6.4",
-    "react": "^0.14.1",
-    "react-dom": "^0.14.1"
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2"
   },
   "optionalDependencies": {
     "bootstrap": "^3.3.5"
